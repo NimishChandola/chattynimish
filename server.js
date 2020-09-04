@@ -7,7 +7,7 @@ const {ExpressPeerServer} = require('peer');
 const peerServer = ExpressPeerServer(server, {
     debug:true
 });
-
+var PORT = process.env.PORT || 443; 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use('/peerjs', peerServer);
@@ -28,4 +28,4 @@ io.on('connection', socket => {
 });
 
 
-server.listen(443);
+server.listen('443' || PORT);
