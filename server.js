@@ -13,7 +13,8 @@ app.use(express.static('public'));
 app.use('/peerjs', peerServer);
 
 app.get('/', (req, res) => {
-    res.redirect(`/${uuidv4()}`);
+    //res.redirect(`/${uuidv4()}`);
+    res.redirect('/chattynimish');
 });
 
 app.get('/:room', (req, res) => {
