@@ -26,6 +26,4 @@ io.on('connection', socket => {
         socket.to(roomId).broadcast.emit('user-connected', userId);
     });
 });
-
-
 server.listen('443' || PORT);
